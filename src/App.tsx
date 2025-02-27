@@ -1,10 +1,10 @@
 import './App.css'
-import { Button } from './components/ui/button'
+import AddTodo from './components/AddTodo'
 
 function App() {
   return (
     <main>
-      <Button>Lets Build Todo</Button>
+      <AddTodo/>
     </main>
   )
 }
