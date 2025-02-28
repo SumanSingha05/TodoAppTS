@@ -9,13 +9,13 @@ type TodoListProps =  {
 const TodoList : React.FC<TodoListProps> = (props) => {
 
   return (
-    <div className="my-5">
+    <div className="grid grid-cols-5 gap-3 my-5">
       {
         props.items.map((todo) =>  (
           <Card key={todo.id}>
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle>{todo.text}</CardTitle>
-              <Button variant='destructive' size={'icon'}><Delete/></Button>
+              <Button className="h-6 w-6" variant={'destructive'} size={'icon'}><Delete/></Button>
             </CardHeader>
           </Card>
         ))
