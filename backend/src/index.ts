@@ -1,4 +1,5 @@
 import express from "express";
+import todoRoutes from "./routes/todo";
 
 const app = express();
 const PORT = 8080;
