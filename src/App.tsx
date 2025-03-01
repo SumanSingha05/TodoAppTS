@@ -11,10 +11,16 @@ function App() {
     const id = Math.random().toString();
     setTodos([...todos, { id, text }]);
   }
+  const removeTodoHandler = (todoId : string) => {
+    const newTodo = todos.filter((todo : Todo) => {
+      return todo.id !== todoId;
+  })
+    setTodos(newTodo);
+  }
   return (
-    <main className='max-w-6xl mx-auto my-10'>
+    <main className='max-w-6xl mx-auto my-10 px-5 md:mx-0'>
       <AddTodo onAddTodo={addTodoHandler} />
-      <TodoList items={todos} />
+      <TodoList items={todos} onRemoveTodo = {removeTodoHandler}/>
     </main>
   )
 }
